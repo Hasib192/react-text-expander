@@ -3,6 +3,7 @@
 This is a simple React project to learn React. 
 
 ## Screenshots
+![react-text-expander](https://github.com/Hasib192/react-text-expander/assets/27824128/d09524a3-531e-49c7-8bc3-c04a182285e1)
 
 
 
