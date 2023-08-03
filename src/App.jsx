@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import TextExpander from "./components/textExpander/TextExpander";
+import data from "./data/data";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container mt-5">
+      <div className="row">
+        <TextExpander displayText={data[0]} collapseNumeberWords={20} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <hr />
+      <div className="row">
+        <TextExpander displayText={data[1]} collapseNumeberWords={10} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <hr />
+      <div className="row">
+        <TextExpander displayText={data[2]} collapseNumeberWords={15} />
+      </div>
+      <hr />
+      <div className="row">
+        <TextExpander displayText={data[3]} collapseNumeberWords={5} />
+      </div>
+      <hr />
+      <div className="row">
+        <TextExpander displayText={data[4]} collapseNumeberWords={5} />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
